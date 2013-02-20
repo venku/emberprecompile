@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'emberprecompile'
+
+if !ARGV[0].nil? 
+    command = ARGV[0].upcase
+else
+    command = "COMPILE"
+end
+
+case command
+    when "WATCH"
+        puts Emberprecompile::Watcher.watch
+    when "COMPILE"
+        puts Emberprecompile::Compiler.compile
+end
