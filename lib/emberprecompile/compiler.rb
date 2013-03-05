@@ -10,17 +10,19 @@ module Emberprecompile
             
             Find.find(source) do |file|
                 if !FileTest.directory?(file)
-                    print "Compiling "+file
-                    templateName = file.chomp(".handlebars")
-                    templateName.slice!(source)
-                    result = Barber::Ember::FilePrecompiler.call(File.read(file))
-                    output.write('/* '+ templateName + ' Handlebar */')
-                    output.puts @string
-                    output.write('Ember.TEMPLATES["' + templateName + '"] = ' + result + '')
-                    output.puts @string
-                    print "\n"
-                else
-                    next
+                    if(file.split('/').length < 3)
+                        if(file.end_with?(".handlebars"))
+                            print "Compiling "+file
+                            templateName = file.chomp(".handlebars")
+                            templateName.slice!(source)
+                            result = Barber::Ember::FilePrecompiler.call(File.read(file))
+                            output.write('/* '+ templateName + ' Handlebar */')
+                            output.puts @string
+                            output.write('Ember.TEMPLATES["' + templateName + '"] = ' + result + '')
+                            output.puts @string
+                            print "\n"
+                        end
+                    end
                 end
             end
             print "\n"
