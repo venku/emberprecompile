@@ -16,7 +16,7 @@ module Emberprecompile
                         templateName.slice!(source)
                         result = Barber::Ember::FilePrecompiler.call(File.read(file))
                         output.write('/* '+ templateName + ' Handlebar */')
-                        output.write('Ember.TEMPLATES["' + templateName + '"] = ' + result + '')
+                        output.write('Ember.TEMPLATES["' + templateName + '"] = ' + result + "\n")
                         print "\n"
                     end
                 end

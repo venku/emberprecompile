@@ -1,6 +1,6 @@
 # Ember Pre-Compile
 
-Compiling handlebars for Ember JS library. Supported versions of libraries are Handlbars JS RC 3 and Ember JS RC 1.
+Compiling handlebars for Ember JS library. Supported versions of libraries are Handlbars JS RC 4 and Ember JS RC 5.
 
 
 ## Installation
