@@ -40,7 +40,7 @@ To keep monitoring changes in handlebar files say:
 
 This gem no longer uses hardcoded folder names. This creates a "emberprecompile-config.rb" file in your project which holds the settings information. Directories can be changed to point to custom locations and users can choose their own file extensions and even specify output folder and file names.
 
-By default handlebars directory is pointing to "views", with file extension of ".handlebars". And output directory will be "compiled" with fine name "views.handlebars.js". 
+By default handlebars directory is pointing to "views", with file extension of ".handlebars". And output directory will be "compiled" with file name "views.handlebars.js". 
 
 ## Contributing
 
