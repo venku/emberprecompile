@@ -13,4 +13,7 @@ case command
         puts Emberprecompile::Watcher.watch
     when "COMPILE"
         puts Emberprecompile::Compiler.compile
+    when "SETUP"
+    	AppSettings = Emberprecompile::Config.setting
+    	print "Pre Compilation project is setup. \n\nLook into emberprecompile-config.rb file for setting up paths to handlebar files"
 end

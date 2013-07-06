@@ -1,7 +1,8 @@
 # Ember Pre-Compile
 
-Compiling handlebars for Ember JS library. Supported versions of libraries are Handlbars JS RC 4 and Ember JS RC 5.
+Compiling handlebars for Ember JS library. 
 
+Tested for Handlbars JS RC 4 and Ember JS RC 5 libraries.
 
 ## Installation
 
@@ -19,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-After installing gem, to compile handlebars say:
+After installing gem, to setup with your project run:
+
+	$ emberprecompile setup
+
+Once the setup is done, to compile handlebars say:
 
 	$ emberprecompile
 
@@ -33,7 +38,9 @@ To keep monitoring changes in handlebar files say:
 
 ## Note
 
-It expects "views" and "compiled" folders are existing in current location. Currently all handlebars are placed under "views" folder with ".handlebars" extension. Compiled handlebars are placed under "compiled" folder in "views.handlebars.js" file.
+This gem no longer uses hardcoded folder names. This creates a "emberprecompile-config.rb" file in your project which holds the settings information. Directories can be changed to point to custom locations and users can choose their own file extensions and even specify output folder and file names.
+
+By default handlebars directory is pointing to "views", with file extension of ".handlebars". And output directory will be "compiled" with fine name "views.handlebars.js". 
 
 ## Contributing
 
